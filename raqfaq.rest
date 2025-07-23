@@ -1,3 +1,4 @@
-@question="Was ist die aktuellste Spring Boot Version?"
+@conversation=chat2
+@question="Hallo wie ist mein Name?"
 ### Ask a question
-GET http://localhost:8080/faq?question={{question}}
+GET http://localhost:8080/{{conversation}}/faq?question={{question}}
