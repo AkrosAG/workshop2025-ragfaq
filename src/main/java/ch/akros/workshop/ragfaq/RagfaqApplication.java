@@ -15,7 +15,13 @@ public class RagfaqApplication {
 	@Bean
 	ChatClient ai(PromptChatMemoryAdvisor promptChatMemoryAdvisor,
 		ChatClient.Builder aibuilder) {
+		var system = """
+            Du bist ein KI-gestützter Assistent, der Menschen hilft, die AcmeCloud verwenden wollen. Nachfolgend findest du die relevanten Teile der AcmeCloud 
+            Dokumentation. Wenn du dort keine Informationen findest, dann antworte höflich, dass du leider nicht weiterhelfen kannst und sie könnten den Support
+            unter +41 31 123 45 67 anrufen.""";
+
 		return aibuilder
+			.defaultSystem(system)
 			.defaultAdvisors(promptChatMemoryAdvisor)
 			.build();
 	}

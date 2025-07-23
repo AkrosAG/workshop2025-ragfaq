@@ -1,4 +1,4 @@
-@conversation=chat2
-@question="Hallo wie ist mein Name?"
+@conversation=first-conversation
+@question="Hallo ich bin neu bei AcmeCloud. Wo fange ich am besten an?"
 ### Ask a question
 GET http://localhost:8080/{{conversation}}/faq?question={{question}}
