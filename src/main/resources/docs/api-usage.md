@@ -1,21 +1,21 @@
-# API Usage
+# API Nutzung
 
-AcmeCloud offers a RESTful API for interacting with your data.
+AcmeCloud bietet eine RESTful API zur Interaktion mit Ihren Daten.
 
-## Authentication
+## Authentifizierung
 
-Include your API key as a bearer token:
+Fügen Sie Ihren API-Schlüssel als Bearer-Token hinzu:
 
 ```http
 Authorization: Bearer YOUR_API_KEY
 ```
 
-## Endpoints
+## Endpunkte
 
-### Submit Data
+### Daten übermitteln
 `POST /v1/data`
 
-Submit your data to be processed.
+Übermitteln Sie Ihre Daten zur Verarbeitung.
 
 **Request Body:**
 ```json
@@ -25,14 +25,14 @@ Submit your data to be processed.
 }
 ```
 
-### Retrieve Results
+### Ergebnisse abrufen
 `GET /v1/results/{id}`
 
-Returns the processed data result.
+Gibt das verarbeitete Daten-Ergebnis zurück.
 
-## Rate Limits
-- Free: 100 req/day
-- Pro: 10,000 req/day
-- Enterprise: Unlimited
+## Anfrage-Limits
+- Free: 100 Anfragen/Tag
+- Pro: 10.000 Anfragen/Tag
+- Enterprise: Unbegrenzt
 
-Check your usage via `GET /v1/usage`.
+Überprüfen Sie Ihre Nutzung mit `GET /v1/usage`.
