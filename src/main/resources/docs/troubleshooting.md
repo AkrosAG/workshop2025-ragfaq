@@ -1,25 +1,25 @@
-# Troubleshooting
+# Fehlerbehebung
 
-If you encounter problems with AcmeCloud, try the following:
+Wenn Sie Probleme mit AcmeCloud haben, versuchen Sie Folgendes:
 
-## Common Issues
+## Häufige Probleme
 
-### 1. Invalid API Key
-- Ensure your key is correct and not expired.
-- Visit your dashboard to generate a new one.
+### 1. Ungültiger API-Schlüssel
+- Stellen Sie sicher, dass Ihr Schlüssel korrekt und nicht abgelaufen ist.
+- Besuchen Sie Ihr Dashboard, um einen neuen zu generieren.
 
-### 2. 403 Forbidden
-- Check if the IP restriction setting is enabled.
-- Ensure your plan allows API access.
+### 2. 403 Verboten
+- Prüfen Sie, ob die IP-Beschränkung aktiviert ist.
+- Stellen Sie sicher, dass Ihr Tarif den API-Zugriff erlaubt.
 
-### 3. CLI Crashes or Won't Start
-- Update the CLI to the latest version: `acmecloud update`
-- Run in debug mode: `acmecloud --debug`
+### 3. CLI stürzt ab oder startet nicht
+- Aktualisieren Sie die CLI auf die neueste Version: `acmecloud update`
+- Führen Sie den Debug-Modus aus: `acmecloud --debug`
 
-## Logs
+## Protokolle
 
-Logs are stored in `~/.acmecloud/logs`. Include them in your support request.
+Protokolle werden in `~/.acmecloud/logs` gespeichert. Fügen Sie diese Ihrer Support-Anfrage bei.
 
 ## Support
 
-Still stuck? Contact support at support@acmecloud.example.com or join our [Slack community](https://slack.acmecloud.example.com).
+Immer noch Probleme? Kontaktieren Sie den Support unter support@acmecloud.example.com oder treten Sie unserer [Slack-Community](https://slack.acmecloud.example.com) bei.

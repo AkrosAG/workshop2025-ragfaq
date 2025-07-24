@@ -1,28 +1,28 @@
-# Getting Started
+# Erste Schritte
 
-Welcome to AcmeCloud! This guide helps you set up and get started quickly.
+Willkommen bei AcmeCloud! Diese Anleitung hilft Ihnen, schnell einzusteigen.
 
-## Account Setup
-1. Visit https://acmecloud.example.com and click on 'Sign Up'.
-2. Enter your email, password, and verify your account.
-3. Choose a plan (Free, Pro, Enterprise).
+## Konto einrichten
+1. Besuchen Sie https://acmecloud.example.com und klicken Sie auf 'Registrieren'.
+2. Geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein und bestätigen Sie Ihr Konto.
+3. Wählen Sie einen Tarif (Free, Pro, Enterprise).
 
-## Creating Your First Project
-1. After login, go to the 'Projects' tab.
-2. Click on 'Create Project' and choose a name and region.
-3. Copy your API Key from the 'Settings' page.
+## Ihr erstes Projekt erstellen
+1. Nach dem Login gehen Sie zum Tab 'Projekte'.
+2. Klicken Sie auf 'Projekt erstellen' und wählen Sie einen Namen und eine Region.
+3. Kopieren Sie Ihren API-Schlüssel von der Seite 'Einstellungen'.
 
 ## Installation
-You can install the CLI using:
+Sie können die CLI wie folgt installieren:
 
 ```bash
 curl -sSL https://acmecloud.example.com/install.sh | bash
 ```
 
-Then authenticate with:
+Authentifizieren Sie sich dann mit:
 
 ```bash
 acmecloud login --api-key YOUR_API_KEY
 ```
 
-You're ready to go!
+Jetzt sind Sie startklar!
