@@ -1,4 +1,4 @@
 @conversation=first-conversation
-@question="Hallo ich bin neu bei AcmeCloud. Wo fange ich am besten an?"
+@question="Angeblich habe ich einen ungültiger API-Schlüssel. Was kann ich dagegen tun?"
 ### Ask a question
 GET http://localhost:8080/{{conversation}}/faq?question={{question}}
