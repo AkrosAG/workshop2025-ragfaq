@@ -6,15 +6,32 @@ import java.nio.file.Paths;
 import java.util.List;
 import org.springframework.ai.document.Document;
 
+/**
+ * Utility class for loading Markdown files from a specified path.
+ * This class provides methods to read Markdown files and convert them into a list of {@link Document} objects.
+ * It supports reading entire files as single documents or treating each line in the file as a separate document.
+ *
+ * <p>Usage example:</p>
+ * <pre>
+ *     List&lt;Document&gt; documents = MarkdownLoader.loadMarkdownFiles("path/to/docs");
+ * </pre>
+ *
+ */
 public final class MarkdownLoader {
 
     private MarkdownLoader() {
     }
 
+    /**
+     * Loads all Markdown files from the specified path and returns them as a list of {@link Document} objects.
+     *
+     * @param docsPath the path to the directory containing Markdown files
+     * @return a list of {@link Document} objects containing the content of the Markdown files
+     */
     static List<Document> loadMarkdownFiles(String docsPath) {
         var docsUrl = MarkdownLoader.class.getClassLoader().getResource(docsPath);
         assert docsUrl != null : "Documentation path not found: " + docsPath;
-        try (var paths = Files.walk(Paths.get(docsUrl.getPath()))) {
+        try (var paths = Files.walk(Paths.get(docsUrl.toURI()))) {
             return paths
                 .filter(Files::isRegularFile)
                 .map(path -> {
@@ -30,6 +47,13 @@ public final class MarkdownLoader {
         }
     }
 
+    /**
+     * Loads all Markdown files from the specified path and returns them as a list of {@link Document} objects,
+     * where each line in the file is treated as a separate document.
+     *
+     * @param docsPath the path to the directory containing Markdown files
+     * @return a list of {@link Document} objects, each representing a line in the Markdown files
+     */
     static List<Document> loadMarkdownFilesByLine(String docsPath) {
         var docsUrl = MarkdownLoader.class.getClassLoader().getResource(docsPath);
         assert docsUrl != null : "Documentation path not found: " + docsPath;
