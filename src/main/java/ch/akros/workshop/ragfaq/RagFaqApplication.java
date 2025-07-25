@@ -17,8 +17,7 @@ import org.springframework.jdbc.core.simple.JdbcClient;
 
 @SpringBootApplication
 public class RagFaqApplication {
-
-    private static final Logger LOG = LoggerFactory.getLogger(RagFaqApplication.class);
+	private static final Logger LOG = LoggerFactory.getLogger(RagFaqApplication.class);
 
     @Bean
     PromptChatMemoryAdvisor promptChatMemoryAdvisor(DataSource dataSource) {
