@@ -31,7 +31,7 @@ public final class MarkdownLoader {
     static List<Document> loadMarkdownFiles(String docsPath) {
         var docsUrl = MarkdownLoader.class.getClassLoader().getResource(docsPath);
         assert docsUrl != null : "Documentation path not found: " + docsPath;
-        try (var paths = Files.walk(Paths.get(docsUrl.getPath()))) {
+        try (var paths = Files.walk(Paths.get(docsUrl.toURI()))) {
             return paths
                 .filter(Files::isRegularFile)
                 .map(path -> {
