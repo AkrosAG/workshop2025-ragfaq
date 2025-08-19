@@ -9,3 +9,21 @@ services:
       - "org.springframework.boot.service-connection=postgres"
     ports:
       - "5432:5432"
+
+  Ollama:
+    image: ollama/ollama:0.6.3-rc0
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    entrypoint: [ "/bin/sh","-lc","ollama serve" ]
+
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+      - OLLAMA_HOST=0.0.0.0
+      - DEFAULT_MODEL=llama3.1:latest
+      - EMBEDDING_MODEL=nomic-embed-text
+
+volumes:
+  pgvector:
+  ollama:
