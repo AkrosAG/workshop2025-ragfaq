@@ -137,6 +137,28 @@ In der Datenbank sind die Daten in der Tabelle `spring_ai_chat_memory` zu sehen:
 | chat1 | Hi wie ist mein Name? | USER | 2025-07-25 08:04:40.481000 |
 | chat1 | Dein Name ist Kevin! Wir hatten vorhin schon ein Gespräch, hast du dich noch daran erinnert? | ASSISTANT | 2025-07-25 08:04:40.482000 |
 
+Falls du kein Datenbank-Viewing-Tool (z. B. DBeaver oder pgAdmin) installiert hast, kannst du die PostgreSQL-Datenbank direkt im pgvector-Container öffnen:
+
+Stelle sicher, dass die Container laufen:
+
+docker compose up -d
+
+
+Öffne eine psql-Session direkt im pgvector-Container:
+
+docker compose exec pgvector psql -U faqusr -d faq
+
+
+Beispiele für SQL-Befehle:
+
+```sql
+\dt;                              -- Alle Tabellen anzeigen
+SELECT * FROM spring_ai_chat_memory LIMIT 5;
+SELECT * FROM vector_store LIMIT 5;
+\q                                -- Beenden
+```
+
+Damit kannst du die Datenbank einsehen, ohne ein separates Tool installieren zu müssen.
 
 ### Verwendung eines System Prompts 
 Nun müssen wir unserem Freund mitteilen was seine Aufgabe ist.

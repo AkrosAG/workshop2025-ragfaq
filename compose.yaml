@@ -23,16 +23,6 @@ services:
 #      - OLLAMA_HOST=0.0.0.0
 #      - DEFAULT_MODEL=llama3.1:latest
 #      - EMBEDDING_MODEL=nomic-embed-text
-#  psql-viewer:
-#    image: alpine/psql
-#    depends_on:
-#      - pgvector
-#    environment:
-#      - PASSWORD=secret
-#    command: >
-#      sh -c "psql -h pgvector -U faqusr -d faq"
-#    stdin_open: true
-#    tty: true
 
 volumes:
   pgvector:
